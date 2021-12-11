@@ -6,6 +6,9 @@ header {
   z-index: 1000;
   background-color: var(--light);
 }
+header {
+  padding: 20px 0;
+}
 header h1 {
   width: 1px;
   height: 1px;

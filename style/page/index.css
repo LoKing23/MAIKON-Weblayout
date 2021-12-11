@@ -49,6 +49,9 @@ footer .container,
 }
 
 /* section-service */
+.section-service h2 {
+  margin-bottom: 40px;
+}
 .section-service {
   background: url("../../img/asset 32.svg") no-repeat right top,
     url("../../img/asset 31.svg") no-repeat left 81%;
@@ -181,7 +184,9 @@ footer .container,
     url(../../img/asset\ 39.svg) no-repeat left 37%,
     url(../../img/asset\ 38.svg) no-repeat right 88.5%;
 }
-
+.section-workFlow h2 {
+  margin-bottom: 40px;
+}
 /* card 基本 */
 .section-workFlow .card {
   display: flex;

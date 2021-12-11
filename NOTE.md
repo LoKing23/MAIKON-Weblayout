@@ -2,8 +2,8 @@
 
 * 0dbbc44 第一版
 git reset 0dbbc44 --hard
-* 105f864 第二版完成
-git reset 105f864 --hard
+* 10d091c 第二版
+git reset 10d091c --hard
 ## 第二版
 耗時：4.5hr
 - 統一section命名格式
@@ -31,8 +31,8 @@ color
 - blue
 - gray
 
-目前疑問：
-1. svg怎麼
+目前疑問： 沒事了
+1. svg
 2. 貼齊左右側的雲如何切齊（container外在包一層）
 ### 查svg怎麼使用 7mins
 直接用img就好，原本以為藍色的部分需要自己染
