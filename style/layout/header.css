@@ -6,6 +6,12 @@ header {
   z-index: 1000;
   background-color: var(--light);
 }
+header h1 {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
 body {
   padding-top: 94px;
 }

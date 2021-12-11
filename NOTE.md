@@ -64,3 +64,7 @@ float區塊加字會爆開，需要思考怎樣不會爆
 ## 整理程式碼 & 調整裝飾品位置 85mins
 1. 嘗試使用inline-block做到類似space-between的效果但發現兩個inline-block並排在一起，後面的設定`margin-left: auto`也沒效果
 2. 用margin推得動是不是就不要用transform: translate去推
+
+
+## 修改第一版
+### header
