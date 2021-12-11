@@ -1,0 +1,29 @@
+/* default btn-white */
+.btn {
+  display: inline-block;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+/* white */
+.btn-light {
+  color: var(--dark);
+  border: 1px solid var(--btn-border);
+}
+.btn-light:hover {
+  background-color: var(--primary);
+  color: var(--light);
+  box-shadow: unset;
+}
+/* primary */
+.btn-primary {
+  color: var(--light);
+  background-color: var(--primary);
+}
+.btn-primary:hover {
+  color: var(--light);
+  background-color: #3b3d42;
+  box-shadow: unset;
+}

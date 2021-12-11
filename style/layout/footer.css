@@ -1,0 +1,98 @@
+footer {
+  padding-top: 80px;
+  padding-bottom: 15px;
+  color: #5d6678;
+}
+footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+footer .wrap > * {
+  width: 25%;
+}
+footer .wrap a {
+  display: block;
+}
+footer .wrap a:hover {
+  color: var(--primary);
+}
+/* 第一列設定 */
+footer .contact img,
+footer .service dt,
+footer .aboutUs dt,
+footer .social h2 {
+  margin-bottom: 20px;
+}
+footer .service dt,
+footer .aboutUs dt,
+footer .social h2 {
+  font-size: 24px;
+  line-height: 52px;
+  color: var(--dark);
+}
+/* dd設定 */
+footer .service dd,
+footer .aboutUs dd {
+  margin-bottom: 16px;
+}
+/* contact */
+footer .contact .list-item {
+  margin-bottom: 16px;
+}
+footer .contact dt,
+footer .contact dd {
+  display: inline-block;
+}
+footer .contact dt {
+  color: var(--primary);
+}
+footer .contact dt::after {
+  content: ":";
+  margin-right: 8px;
+}
+/* social */
+footer .social p {
+  color: #5d6678;
+  margin-bottom: 16px;
+}
+footer .social .social-list {
+  display: flex;
+  align-items: center;
+}
+footer .social .list-item + .list-item {
+  margin-left: 8px;
+}
+footer .social .list-item a {
+  padding: 10px;
+  border: 1px solid #d2d6de;
+  border-radius: 50%;
+}
+footer .social .list-item i {
+  font-size: 18px;
+  color: #d2d6de;
+}
+footer .social a:hover {
+  background-color: var(--primary);
+}
+footer .social a:hover i {
+  color: var(--light);
+}
+/* copyright & policy & FAQ */
+footer .another {
+  display: flex;
+}
+footer .privacy {
+  margin-left: auto;
+}
+footer .faq {
+  margin-left: 32px;
+}
+footer .privacy:hover,
+footer .faq:hover,
+footer .copyright a {
+  color: var(--primary);
+}
+footer .copyright a:hover {
+  color: #5d6678;
+}

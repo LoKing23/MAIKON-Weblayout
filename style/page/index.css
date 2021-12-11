@@ -1,0 +1,385 @@
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section {
+  padding: 80px 0;
+}
+.decoration {
+  position: absolute;
+  z-index: -1;
+}
+/* 圖文並列區  .contentWrap*/
+.contentWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contentWrap.row-reverse {
+  flex-direction: row-reverse;
+}
+.contentWrap .imgWrap.offset-1 {
+  margin-right: 100px;
+}
+.contentWrap .content {
+  width: 410px;
+}
+.contentWrap .content > :not(:first-child) {
+  margin-top: 40px;
+}
+.contentWrap .imgWrap {
+  position: relative;
+}
+.contentWrap form {
+  width: 450px;
+  background-color: var(--light);
+  padding: 40px;
+  margin-right: auto;
+  margin-left: 100px;
+  border-radius: 6px;
+  box-shadow: 0 0 60px 0 #00000015;
+}
+.contentWrap form > :not(:first-child) {
+  margin-top: 20px;
+}
+.contentWrap button {
+  border: unset;
+}
+
+.contentWrap textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.contentWrap form + .decoration {
+  right: 0;
+  transform: translateY(-215px);
+}
+
+/* contentWrap 裝飾品 */
+/* 1. success */
+.success .decoration {
+  top: 0;
+  left: -50px;
+}
+/* 2. concatUS */
+.contactUs .decoration:nth-child(1) {
+  right: -100px;
+  top: 200px;
+}
+.contactUs .decoration:nth-child(2) {
+  bottom: 50px;
+  left: -200px;
+}
+/* service */
+.service .text {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+.service .text img {
+  position: absolute;
+  right: 0;
+}
+.service .card .decoration {
+  left: 0;
+  margin-top: 200px;
+}
+.service .cards {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--light);
+}
+.service .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 370px;
+  padding: 50px 40px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 40px 2px #00000010;
+}
+.service .card:nth-child(3n + 2),
+.service .card:nth-child(3n + 3) {
+  margin-left: 30px;
+}
+.service .card img:not(.decoration) {
+  border-radius: 50%;
+  margin-bottom: 50px;
+}
+.service .card h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.service p {
+  color: var(--gray);
+  flex-grow: 1;
+  margin-bottom: 32px;
+}
+.service .card b {
+  display: block;
+  margin-top: auto;
+}
+.service .card a:hover {
+  color: var(--primary);
+}
+.service .card a {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* studio */
+.studio {
+  background-color: #2470ff;
+}
+.studio .container {
+  color: var(--light);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.studio .cards {
+  width: 585px;
+}
+.studio .text {
+  width: 350px;
+}
+.studio .card {
+  width: 270px;
+  padding: 50px 25px;
+  margin-bottom: 25px;
+  background-color: #3f81ff;
+  border-radius: 10px;
+  box-shadow: 0 0 0px 1px #307cff;
+  float: left;
+}
+.studio .card:nth-child(even) {
+  margin-left: 25px;
+}
+.studio dt {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 16px;
+}
+.studio dd {
+  font-size: 14px;
+}
+.studio .text {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.studio .text > * {
+  margin-bottom: 32px;
+}
+.studio p {
+  font-size: 14px;
+  font-weight: 100;
+  color: var(--light);
+}
+.studio .btn {
+  color: var(--light);
+  border: 1px solid var(--light);
+}
+.studio .btn:hover {
+  background-color: var(--primary);
+  border-color: transparent;
+}
+.studio .decorations {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 50px;
+}
+.studio .decorations .decoration:nth-child(2) {
+  margin-top: 30px;
+  margin-right: 100px;
+}
+.studio .decorations .decoration:nth-child(3) {
+  margin-top: 300px;
+  margin-right: 20px;
+}
+/* work flow */
+.workFlow {
+  position: relative;
+}
+.workFlow h2 {
+  margin-bottom: 40px;
+}
+.workFlow .card {
+  display: flex;
+  align-items: center;
+}
+.workFlow .card + .card {
+  margin-top: 20px;
+}
+.workFlow .card:nth-child(odd):not(:nth-child(3)) {
+  margin-left: 100px;
+}
+.workFlow .card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.workFlow .card:nth-child(5) .card-content {
+  margin-top: 30px;
+  margin-bottom: auto;
+}
+.workFlow .card-content {
+  display: flex;
+  align-items: center;
+  width: 550px;
+}
+.workFlow .card:nth-child(odd) .card-content {
+  margin-left: 100px;
+}
+.workFlow .card:nth-child(even) .card-content {
+  margin-right: 100px;
+}
+.workFlow .card-content h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.workFlow .card-content p {
+  color: var(--gray);
+}
+.workFlow .card-content > .card-img {
+  position: relative;
+  margin-right: 50px;
+  width: 80px;
+  height: 80px;
+}
+.workFlow .card-content .text {
+  width: 0;
+  flex-grow: 1;
+}
+.workFlow .card-content img.shadow-primary {
+  border-radius: 50%;
+  width: 100%;
+}
+/* work flow - path */
+.workFlow .card-path {
+  position: absolute;
+}
+.workFlow .card:nth-child(1) .card-path {
+  transform: scale(2);
+  left: -120%;
+  bottom: -180%;
+}
+.workFlow .card:nth-child(2) .card-path {
+  transform: scale(2.6);
+  bottom: -150%;
+  left: 110%;
+}
+.workFlow .card:nth-child(3) .card-path {
+  transform: scale(2.9);
+  bottom: -140%;
+  left: -160%;
+}
+.workFlow .card:nth-child(4) .card-path {
+  transform: scale(3);
+  bottom: -130%;
+  left: 150%;
+}
+/* work flow - decoration */
+
+.workFlow .card:nth-child(1) .decoration {
+  right: 0;
+  margin-top: -20px;
+}
+.workFlow .card:nth-child(2) .decoration {
+  transform: translateY(80px) scaleY(-1);
+  left: 0;
+}
+
+/* project */
+.project {
+  background-color: #fafbff;
+}
+.project .text {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.project .decoration {
+  left: 0;
+}
+.project .cards {
+  display: flex;
+  flex-flow: wrap;
+  margin-top: 50px;
+}
+.project .card {
+  width: 361px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+.project .card:nth-child(3n + 2),
+.project .card:nth-child(3n + 3) {
+  margin-left: 30px;
+}
+.project .mask {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 30px;
+  background-color: rgb(115 223 129/0.98);
+  transition: opacity 0.3s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: inherit;
+}
+.project .card:hover .mask {
+  opacity: 1;
+}
+.project h3 {
+  font-size: 36px;
+}
+.project h3,
+.project a {
+  color: var(--light);
+}
+/* subscribe */
+.subscribe {
+  background-color: #fdfdff;
+}
+.subscribe h2 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.subscribe .inputArea {
+  width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+.subscribe .inputArea input {
+  width: 0;
+  flex-grow: 1;
+  border-right: none;
+  font-size: 16px;
+  padding: 15px 20px;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  box-shadow: 0 0 20px 0 #00000010;
+}
+.subscribe .inputArea button {
+  border-radius: 0 4px 4px 0;
+}
+.subscribe h2 + .decoration {
+  right: 20px;
+  margin-top: -30px;
+}

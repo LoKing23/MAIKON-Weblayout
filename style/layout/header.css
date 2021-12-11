@@ -1,0 +1,36 @@
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: var(--light);
+}
+body {
+  padding-top: 94px;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+header nav {
+  margin-left: auto;
+}
+header .list {
+  display: flex;
+}
+header .list-item a {
+  color: var(--gray);
+  padding: 8px 0;
+}
+header .list .list-item + .list-item {
+  margin-left: 20px;
+}
+header .list-item:hover a,
+header .list-item.active a {
+  border-bottom: 1px solid var(--gray);
+}
+header .btn {
+  margin-left: 50px;
+}

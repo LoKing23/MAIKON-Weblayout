@@ -1,0 +1,7 @@
+.shadow-primary {
+  box-shadow: 0 0 20px 0px var(--primary);
+}
+
+.shadow-gray {
+  box-shadow: 0 0 20px 5px #00000010;
+}
