@@ -2,8 +2,8 @@
 
 * 0dbbc44 第一版
 git reset 0dbbc44 --hard
-* 10d091c 第二版
-git reset 10d091c --hard
+* 998a636 第二版
+git reset 998a636 --hard
 ## 第二版
 耗時：4.5hr
 - 統一section命名格式

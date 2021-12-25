@@ -1,14 +1,6 @@
-header .container,
-footer .container,
-.section .container {
-  width: 1200px;
-  padding: 0 15px;
-  margin: auto;
-}
 .section {
   padding: 40px 0;
 }
-
 /* 共用樣式 section1,2,4,8*/
 .section-success .container,
 .section-challenge .container,
@@ -48,14 +40,6 @@ footer .container,
   margin-left: 150px;
 }
 
-/* section-service */
-.section-service h2 {
-  margin-bottom: 40px;
-}
-.section-service {
-  background: url("../../img/asset 32.svg") no-repeat right top,
-    url("../../img/asset 31.svg") no-repeat left 81%;
-}
 /* section-contactUs */
 .section-contactUs {
   background: url(../../img/asset\ 33.svg) no-repeat 85% 38%,
@@ -69,6 +53,13 @@ footer .container,
 }
 
 /* service */
+.section-service h2 {
+  margin-bottom: 40px;
+}
+.section-service {
+  background: url("../../img/asset 32.svg") no-repeat right top,
+    url("../../img/asset 31.svg") no-repeat left 81%;
+}
 .section-service .cards {
   display: flex;
   flex-wrap: wrap;
@@ -102,18 +93,13 @@ footer .container,
   flex-grow: 1;
   margin-bottom: 32px;
 }
-.section-service .card b {
-  display: block;
-  margin-top: auto;
-}
-.section-service .card a:hover {
-  color: var(--primary);
-}
 .section-service .card a {
   font-size: 16px;
   font-weight: 500;
 }
-
+.section-service .card a:hover {
+  color: var(--primary);
+}
 /* studio */
 .section-studio {
   background: url(../../img/asset\ 37.svg) no-repeat right 20%,
@@ -308,16 +294,21 @@ footer .container,
 .section-project .mask {
   position: absolute;
   opacity: 0;
-  width: 100%;
-  height: 100%;
-  padding: 40px 30px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 30px 40px;
   background-color: rgb(115 223 129/0.98);
   transition: opacity 0.3s;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: inherit;
+}
+.section-project .mask h3 {
+  color: #fa0;
+}
+.section-project .mask a {
+  color: #fa0;
+  display: block;
+  margin-top: auto;
 }
 .section-project .card:hover .mask {
   opacity: 1;
