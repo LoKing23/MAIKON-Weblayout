@@ -1,5 +1,6 @@
-# 暴力班最終作業
+# 切版紀錄
 
+## Git版控紀錄
 * 0dbbc44 第一版
 git reset 0dbbc44 --hard
 * 998a636 第二版
@@ -13,65 +14,47 @@ git reset 998a636 --hard
 - 微調部分程式碼
 ## 第一版
 耗時：12.5hr
-### 搭建環境 15mins
-思考css怎麼切分
-### 分析版面 15mins
-- container: 1170px (width:1200, p0-15)
+### Global
+- 分析版面: 30mins
+- global,reset, variable, base: 20mins
+- header: 50mins
+- footer: 50mins
+### page
+- section1,思考與section2,4如何共用css：65mins
+- section3: 60mins
+- section5 深藍方塊酥: 40mins
+- section6 workflow: 200mins
+- section7 project: 40mins
+- section8 sign up: 40mins
+- section9 subscribe 30mins
+### 整理
+- 整理程式碼,簡化圖片裝飾品程式碼 85mins
 
-component:
-- btn
-  - green
-  - white
-  - blue
-- box-shadow
-  - green
+<br>
 
-color
-- green (main)
-- blue
-- gray
+## 問題總整理
 
-目前疑問： 沒事了
-1. svg
-2. 貼齊左右側的雲如何切齊（container外在包一層）
-### 查svg怎麼使用 7mins
-直接用img就好，原本以為藍色的部分需要自己染
-### reset, variable 15mins
-### 切header 50mins
-因應header設定的position:fixed影響設定的body內padding-top:94px是否要放在header內
-還是要拉出來，放在reset等地方，但考慮到未來要改會比較麻煩感覺放header是個不錯的方案
-### 切footer 60mins
-不知該如何撰寫Our Social Networks區塊的HTML
-感覺用h2太大，但用h3又會有斷層
-不知道h2能不能用在logo上，這樣最後一籃就可以合理使用h3
-### 初切section1,2,4相同部分 65mins
-版面上有三塊幾乎一樣的排版，在考慮這種相似的「排版方式」能不能放到component或是獨立到某個區域之類的
-另外命名也是一大頭痛點
-疑問：「排列方式」是否能抽出
-抽出「排列方式」的優缺點
+中途遇到的問題放在NOTE.md內，這裡放還沒解決的問題
+- css component命名 <br>
+把元件抽出來（button,shadow）以primary這種命名方式減少未來因為樣式名稱與內容對不上的修改，不知道會不會有什麼其他問題><
 
-優點：
-1. 程式碼少
-2. 未來加東西方便
+- css命名 <br>
+作業的section1,2,4的格局差不多，但還是有必須要客製化的地方，這次是用群組式宣告，但如果有很多頁也有同樣的設定那是不是拉出一個class管理會比較好（當成component）
 
-缺點：
-1. 客製化部分還是要另外處理(新增專屬class)
+- 顏色使用:root搭配CSS變數去做管理 <br>
+版面上出現頻率的不高的顏色需要做管理嗎（像是深藍方塊酥或某些出現1,2次的顏色）？還是說會在藍色方塊酥的CSS底下新增一個local的variable?另外顏色的命名也是思考很久，像是不同層級的灰，直接用gray-1~gray-9這種命名感覺在寫的時候還需要回頭看:root，用placeholder這種命名比較好辨識但這個顏色要用在其他地方時就會有點不太妥，學bs命名好像太多相同色也不好命(primary,secondary…沒了），目前是想還是乾脆只設定最主要的少數幾個顏色其他就不要管他了XD
+- box-shadow數值 <br> 
+box-shadow的值目前都用盲測的，不知道有沒有更好的方法可以知道實際數值
+- footer內的標題 <br>
+footer的最後一段感覺是一個小article，資訊量大概是h3等級的，但因為footer沒有下任何h2，最後一段直接下h2感覺太大，但下h3又會有沒有h2的斷層，目前是用隱藏的方式寫一個看不到的h2出來
+這裡有又一個疑問是footer裡面有h2,h3和article是不是有點不太正常
+- margin,translate效能問題 <br>
+使用margin與transfor: translate的效能
+原本使用transform: translate去推的地方後面都改成margin去推，不知道這樣效能會不會比較好一點（原本的裝飾品是用position去推再用transform微調）
 
-個別區域裝飾圖片疑問 <br>
-section1,2,4相同的部分都使用一樣的class去做處理，但裝飾品這種「客製化」的樣式似乎需要有個別的class去區分，否則也可以使用nth-child去指定個區域的裝飾品，但這樣若是版面調整(ex:section2與section5互換)，就會造成需要重寫的窘境
-### We provide a wide range of creative services 60mins
-不懂為什麼裝飾圖片設定`position:absolute`會離開資料流，理論上只設定絕對定位應該會待在原位，但它跑到了card的最上方
-### 藍底方塊酥區 40mins
-float區塊加字會爆開，需要思考怎樣不會爆
-### Steps of our work 190mins
-裝飾品、虛線固定的有點暴力
-沒有什麼規則，裝飾品還可以跟著card一起減少一點定位
-### Our team's work with Projects 40mins
-### Sign up for our consultation 40mins
-排版感覺跟前面的很像，在思考要不要套用前面的樣式改一下，還是要做一個新的
-### subscribe 30mins
-### 整理程式碼 & 調整裝飾品位置 85mins
-1. 嘗試使用inline-block做到類似space-between的效果但發現兩個inline-block並排在一起，後面的設定`margin-left: auto`也沒效果
-2. 用margin推得動是不是就不要用transform: translate去推
+- float同一排等高 <br>
+藍色方塊酥用float去排，但加字會不對稱，不知道不用flex要怎麼讓每顆方塊酥文字量改變時也可以等高
+
+
 
 
