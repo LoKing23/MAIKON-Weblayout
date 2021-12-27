@@ -301,15 +301,12 @@
   padding: 30px 40px;
   background-color: rgb(115 223 129/0.98);
   transition: opacity 0.3s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.section-project .mask h3 {
-  color: #fa0;
-}
-.section-project .mask a {
-  color: #fa0;
-  display: block;
-  margin-top: auto;
-}
+
 .section-project .card:hover .mask {
   opacity: 1;
 }
