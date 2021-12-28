@@ -10,10 +10,9 @@ function fadeIn() {
   fades.forEach((item) => {
     const delay = item.dataset.fadeDelay;
     const rectInfo = item.getBoundingClientRect();
-    //物件出現一半時的高度
-    const displayHeightMin = screenHeight - rectInfo.height / 2;
+    //物件出現1/3後出現
     const displayHeightMax = screenHeight - rectInfo.height / 3;
-    if (rectInfo.y < displayHeightMax && displayHeightMin < rectInfo.y) {
+    if (rectInfo.y < displayHeightMax) {
       setTimeout(() => {
         item.classList.add("active");
       }, delay);
